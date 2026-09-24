@@ -4,12 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 @AGENTS.md
 
+## Docs
+
+Before writing or changing any code, always check `/docs` first for a relevant doc and follow it.
+
 ## Commands
 
 - `npm run dev` — start dev server (http://localhost:3000)
 - `npm run build` — production build
 - `npm run start` — run production build
 - `npm run lint` — ESLint
+
+- /docs/ui.md
 
 ## Architecture
 
