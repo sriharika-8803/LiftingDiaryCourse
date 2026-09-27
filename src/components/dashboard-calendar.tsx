@@ -1,6 +1,7 @@
 "use client";
 
 import { format } from "date-fns";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { enUS } from "react-day-picker/locale";
 
@@ -59,7 +60,12 @@ export function DashboardCalendar({
                 <p className="text-sm text-muted-foreground">
                   No workouts logged for this date.
                 </p>
-                <Button>Log New Workout</Button>
+                <Button
+                  nativeButton={false}
+                  render={<Link href="/dashboard/workout/new" />}
+                >
+                  Log New Workout
+                </Button>
               </CardContent>
             </Card>
           ) : (

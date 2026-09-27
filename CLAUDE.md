@@ -17,6 +17,8 @@ Before writing or changing any code, always check `/docs` first for a relevant d
 
 - /docs/ui.md
 - /docs/data-fetching.md
+- /docs/auth.md
+- /docs/data-mutation.md
 
 ## Architecture
 

@@ -4,6 +4,17 @@ import { auth } from "@clerk/nextjs/server";
 import { and, eq, gte, lte } from "drizzle-orm";
 import { endOfDay, startOfDay } from "date-fns";
 
+export async function createWorkout(name: string, startedAt: Date) {
+  const { userId } = await auth();
+  if (!userId) throw new Error("Unauthorized");
+
+  const [workout] = await db
+    .insert(workouts)
+    .values({ userId, name, startedAt })
+    .returning();
+  return workout;
+}
+
 export async function getWorkouts(date: Date) {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
