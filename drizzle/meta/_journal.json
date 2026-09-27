@@ -43,6 +43,13 @@
       "when": 1790067546337,
       "tag": "0005_clumsy_dorian_gray",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790247304008,
+      "tag": "0006_reshape_to_uuid_snake_case",
+      "breakpoints": true
     }
   ]
 }

@@ -16,6 +16,7 @@ Before writing or changing any code, always check `/docs` first for a relevant d
 - `npm run lint` — ESLint
 
 - /docs/ui.md
+- /docs/data-fetching.md
 
 ## Architecture
 
