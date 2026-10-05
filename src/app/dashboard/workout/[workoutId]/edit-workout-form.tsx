@@ -42,7 +42,7 @@ export function EditWorkoutForm({
   return (
     <form onSubmit={handleSubmit}>
       <Card>
-        <CardContent className="flex flex-col gap-4">
+        <CardContent className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="flex flex-col gap-2">
             <Label htmlFor="name">Workout Name</Label>
             <Input

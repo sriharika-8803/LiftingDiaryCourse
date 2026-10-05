@@ -1,0 +1,27 @@
+Example output of scripts/workout_chart.py
+==========================================
+
+Command:
+  python .claude/skills/workout-chart/scripts/workout_chart.py workouts-per-month.png
+
+Console output:
+  Saved workouts-per-month.png (8 workouts)
+
+Data behind the chart (12 months, oldest first; empty months are 0):
+  Month      Workouts
+  Nov 2025   0
+  Dec 2025   0
+  Jan 2026   0
+  Feb 2026   0
+  Mar 2026   0
+  Apr 2026   0
+  May 2026   0
+  Jun 2026   0
+  Jul 2026   0
+  Aug 2026   0
+  Sep 2026   7
+  Oct 2026   1
+
+Chart: bar chart titled "Workouts per month (past year)", x axis "Month"
+(labels like "Sep 2026", rotated 45 degrees), y axis "Number of workouts"
+(whole numbers), each bar labelled with its count. PNG, 10x5 inches at 150 dpi.

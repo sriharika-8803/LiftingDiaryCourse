@@ -25,7 +25,28 @@ export async function getWorkout(workoutId: string) {
 
   return db.query.workouts.findFirst({
     where: and(eq(workouts.id, workoutId), eq(workouts.userId, userId)),
+    with: {
+      workoutExercises: {
+        orderBy: (workoutExercises, { asc }) => [asc(workoutExercises.order)],
+        with: {
+          exercise: true,
+          sets: { orderBy: (sets, { asc }) => [asc(sets.setNumber)] },
+        },
+      },
+    },
   });
+}
+
+export async function completeWorkout(workoutId: string) {
+  const { userId } = await auth();
+  if (!userId) throw new Error("Unauthorized");
+
+  const [workout] = await db
+    .update(workouts)
+    .set({ completedAt: new Date() })
+    .where(and(eq(workouts.id, workoutId), eq(workouts.userId, userId)))
+    .returning();
+  return workout;
 }
 
 export async function updateWorkout(
