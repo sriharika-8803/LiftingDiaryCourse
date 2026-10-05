@@ -15,10 +15,16 @@ Before writing or changing any code, always check `/docs` first for a relevant d
 - `npm run start` — run production build
 - `npm run lint` — ESLint
 
+## Code Generation Guidelines
+
+**IMPORTANT**: When generating any code, ALWAYS first refer to the relevant documentation files within the `/docs` directory to understand existing conventions.
+
 - /docs/ui.md
 - /docs/data-fetching.md
 - /docs/auth.md
 - /docs/data-mutation.md
+- /docs/server-components.md
+- /docs/routing.md
 
 ## Architecture
 
